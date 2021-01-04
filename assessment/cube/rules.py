@@ -77,7 +77,6 @@ class SecondRuleVariables(BaseVariables):
         from django.db.models import Sum
         from django.db.models.expressions import RawSQL
 
-        event = EndUserEvent.objects.last()
         events = EndUserEvent.objects.filter(
             timestamp__gte=event.timestamp-timedelta(minutes=5),
             timestamp__lte=event.timestamp,

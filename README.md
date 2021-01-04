@@ -3,8 +3,10 @@
 To get things started
 
 # Requirements
-Python (2.7, 3.4, 3.5, 3.6, 3.7)
-Django (1.9, 1.10, 1.11, 2.0.7)
+a. Python (2.7, 3.4, 3.5, 3.6, 3.7)
+b. Django (1.9, 1.10, 1.11, 2.0.7)
+c. pip
+d. Docker
 
 # Init
 1. Clone the repository

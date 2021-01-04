@@ -1,0 +1,1 @@
+CUBE_SERVER = "cube-server"

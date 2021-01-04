@@ -1,4 +1,4 @@
-# Explanation of design via an example
+# Explanation of design via example
 
 Let's take a look at a quick example.
 

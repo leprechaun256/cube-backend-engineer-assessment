@@ -13,7 +13,7 @@ d. Docker
 2. cd assessment
 
 # DB
-3. docker run --rm -P -p 127.0.0.1:5432:5432 -e POSTGRES_PASSWORD="postgres" --name pg postgres:alpine
+3. docker run --rm -P -p 127.0.0.1:5432:5432 -e POSTGRES_PASSWORD="postgres" --name postgres postgres:alpine
 
 # Server
 4. pip install -r requirements.txt

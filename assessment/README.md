@@ -70,7 +70,7 @@ class ProductOrder(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
 ```
 
-Add variables and actions to your `test_app/rules.py` module (more about variables and actions can be found [here][business-rules-lib]):
+Add variables and actions to your `test_app/rules.py` module (more about variables and actions can be found [here][https://github.com/venmo/business-rules]):
 
 ```python
 import datetime

@@ -9,6 +9,8 @@ from business_rules.variables import BaseVariables, numeric_rule_variable, \
     string_rule_variable, boolean_rule_variable
 from django.utils import timezone
 from django_business_rules.business_rule import BusinessRule
+from redis import Redis
+from rq_scheduler import Scheduler
 
 from cube.models import EndUser, EndUserEvent
 from assessment.constants import CUBE_SERVER
@@ -121,6 +123,7 @@ class ThirdRuleVariables(BaseVariables):
         else:
             return False
 
+scheduler = Scheduler(connection=Redis()) # Get a scheduler for the "default" queue
 
 class ThirdRuleActions(BaseActions):
 
@@ -130,7 +133,13 @@ class ThirdRuleActions(BaseActions):
 
     @rule_action(label='Alert cube operator if feedback has not been given within 15 minutes of bill payment.')
     def alert_cube_operator_if_no_feedback_15_minutes(self):
-        logger.info("Mock alert message to cube operator with phone number 91XXXXXXXXXX.")
+        bill_event_id = self.end_user_event.id
+        event = self.end_user_event
+
+        if not EndUserEvent.objects.filter(noun="fdbk", verb="post", properties__bill_event_id=bill_event_id):
+            from datetime import timedelta
+            scheduler.enqueue_at(event.timestamp + timedelta(minutes=15), 
+                lambda: logger.info("Mock alert message to cube operator with phone number 91XXXXXXXXXX."))
 
 
 class ThirdBusinessRule(BusinessRule):

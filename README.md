@@ -37,3 +37,6 @@ src/redis-server
 9. Open localhost:8000/assessment/business-rule on the browser
 
 Setup rules as per the requirement.
+
+# Demo
+http://8df2a8389742.ngrok.io/assessment/business-rule/

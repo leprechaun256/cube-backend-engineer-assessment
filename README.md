@@ -25,7 +25,7 @@ cd redis-5.0.5
 make
 sudo src/redis-server
 ```
-# Redis Worker + Redis Scheduler(in new terminals)
+# Redis Worker + Redis Scheduler (in new terminals)
 ```bash
 cd assessment
 ```

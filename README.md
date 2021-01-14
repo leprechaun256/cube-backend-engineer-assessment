@@ -13,7 +13,7 @@ e. Redis
 1. Clone the repository
 2. cd assessment
 
-# DB + Redis (in new terminals)
+# DB + Redis (in new terminals) 
 3a. 
 docker run --rm -P -p 127.0.0.1:5432:5432 -e POSTGRES_PASSWORD="postgres" --name pg postgres:alpine
 
@@ -24,6 +24,19 @@ tar xzf redis-5.0.5.tar.gz
 cd redis-5.0.5
 make
 sudo src/redis-server
+```
+# Redis Worker + Redis Scheduler(in new terminals)
+```bash
+cd assessment
+```
+3c. 
+```bash
+rqworker
+```
+
+3d.
+``` bash 
+rqscheduler
 ```
 
 # Server

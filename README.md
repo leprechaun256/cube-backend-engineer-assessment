@@ -53,3 +53,19 @@ Setup rules as per the requirement.
 
 # Demo
 http://8df2a8389742.ngrok.io/assessment/business-rule/
+
+# Events POST URL
+http://8df2a8389742.ngrok.io/cube-server/events
+
+# Sample Event
+```json
+{
+	"ts_source": "2020-12-22T18:30",
+	"noun": "bill",
+	"verb": "pay",
+	"user":2,
+	"properties": {"noun": "bill", "value":2000},
+	"time_spent": 0
+}
+```
+

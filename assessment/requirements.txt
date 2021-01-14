@@ -3,5 +3,5 @@ django==2.0.7
 django-business-rules
 psycopg2-binary>=2.8
 djangorestframework
-
+rq-scheduler==0.9.1
 

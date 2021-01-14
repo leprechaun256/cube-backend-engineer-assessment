@@ -27,7 +27,7 @@ src/redis-server
 
 # Server
 4. pip install -r requirements.txt
-5. ./manage.py makemigrations
+5. ./manage.py makemigrations cube django_business_rules
 6. ./manage.py migrate
 7. ./manage.py dbr
 8. ./manage.py runserver

@@ -99,7 +99,7 @@ class SecondRuleActions(BaseActions):
 
     @rule_action(label='Alert user')
     def alert_user(self):
-        user_id = self.end_user_event.user
+        user_id = self.end_user_event.user.user_id
         logger.info("Mock alert message to user with user id - {}".format(user_id))
 
 

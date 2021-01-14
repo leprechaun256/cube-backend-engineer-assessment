@@ -17,13 +17,14 @@ e. Redis
 3a. 
 docker run --rm -P -p 127.0.0.1:5432:5432 -e POSTGRES_PASSWORD="postgres" --name pg postgres:alpine
 
-3b. 
+3b.
+``` bash 
 wget http://download.redis.io/releases/redis-5.0.5.tar.gz
 tar xzf redis-5.0.5.tar.gz
 cd redis-5.0.5
 make
 src/redis-server
-
+```
 
 # Server
 4. pip install -r requirements.txt

@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['localhost']
 # Application definition
 
 INSTALLED_APPS = [
-    'django_business_rules',
+    'django_business_rules.apps.DbrAppConfig',
     'cube.apps.CubeAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
